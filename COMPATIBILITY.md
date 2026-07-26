@@ -18,6 +18,7 @@ the public API may change between minor versions.
 | Integration | Requires umbra-core | Notes |
 |---|---|---|
 | **umbra-action** | `>= 0.3.0` | Renders the PR comment via `umbra comment`; installs bubblewrap for the `sandboxed` tier. Was `>= 0.1.3`. |
+| **umbra-eval** | `>= 0.3.0` | Needs the capability graph, plan binding, masked verifier, gates, and `admit_extension`. |
 | **umbra-plugins** | `>= 0.2.0` | Uses `umbra guard` for the editor PreToolUse hook. |
 | **umbra** (hosted) | tracks `main` / latest | Converging on consuming `umbra-core` directly (no forked governance). |
 | **umbra-github-app** (planned) | `>= 0.2.0` | — |
