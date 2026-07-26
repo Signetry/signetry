@@ -1,0 +1,31 @@
+name: Umbrella / cross-repo issue
+description: For questions about the platform overview, catalog, compatibility, or which repo something belongs in. Component bugs go to the child repo (see the links).
+title: "[umbrella] "
+labels: ["umbrella"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This repository is the **overview** of the Umbra platform — it holds no
+        governance code. If your issue is about a specific component, please open
+        it in that repo instead (the blank-issue links route you there).
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Architecture / design question
+        - Integration catalog (INTEGRATIONS.md)
+        - Compatibility matrix (COMPATIBILITY.md)
+        - Release train (RELEASE.md)
+        - Install path (INSTALL.md)
+        - "I'm not sure which repo this belongs in"
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: Details
+      description: What are you trying to do, and what's unclear or wrong?
+    validations:
+      required: true
