@@ -17,14 +17,14 @@ reimplement governance — they emit or display the same **Admission Decision Pa
 | [**umbra-core**](https://github.com/bkd-dotcom/umbra-core) | The kernel — the only place governance logic lives: policy, guard, admit, dual verifier, plan binding, G1/G2/G3 gates, passport, receipt, SLSA/transparency, extension admission, CLI, MCP server. | — | **stable** |
 | [**umbra**](https://github.com/bkd-dotcom/umbra) (hosted) | Production hosted platform / org console at [umbra.engineer](https://umbra.engineer). | umbra-core | **beta** |
 | [**umbra-action**](https://github.com/bkd-dotcom/umbra-action) | GitHub Action + Marketplace required check; posts the canonical PR comment and uploads the signed receipt. | umbra-core | **stable** |
-| [**umbra-plugins**](https://github.com/bkd-dotcom/umbra-plugins) | Editor/agent plugins (Claude Code, Cursor, Codex, universal git hook). Being split into per-agent repos below. | umbra-core | **beta** |
-| **umbra-github-app** | GitHub App (PR comments, webhooks) via a short-lived installation token. | umbra-core | **planned** |
-| **umbra-claude-code** | Claude Code plugin (split from umbra-plugins). | umbra-core | **planned** |
-| **umbra-cursor** | Cursor integration (split from umbra-plugins). | umbra-core | **planned** |
-| **umbra-codex** | Codex integration (split from umbra-plugins). | umbra-core | **planned** |
+| [**umbra-plugins**](https://github.com/bkd-dotcom/umbra-plugins) | Original editor/agent plugins monorepo. Superseded by the per-agent repos below; kept for existing installs. | umbra-core | **beta** |
+| [**umbra-github-app**](https://github.com/bkd-dotcom/umbra-github-app) | GitHub App (PR comments, webhooks) via a short-lived installation token. | umbra-core | **planned** |
+| [**umbra-claude-code**](https://github.com/bkd-dotcom/umbra-claude-code) | Claude Code plugin: PreToolUse guard + MCP server + `/umbra:admit` skill. | umbra-core | **beta** |
+| [**umbra-cursor**](https://github.com/bkd-dotcom/umbra-cursor) | Cursor integration: MCP server + project rule. | umbra-core | **beta** |
+| [**umbra-codex**](https://github.com/bkd-dotcom/umbra-codex) | Codex integration: MCP server + lifecycle-hook guard. | umbra-core | **beta** |
 | **umbra-copilot** | Copilot / coding-agent integration. | umbra-core | **planned** |
 | **umbra-vscode** | VS Code extension. | umbra-core | **planned** |
-| **umbra-precommit** | Universal git / pre-commit hooks (split from umbra-plugins). | umbra-core | **planned** |
+| [**umbra-precommit**](https://github.com/bkd-dotcom/umbra-precommit) | Universal git / pre-commit hooks. | umbra-core | **beta** |
 | **umbra-eval** | Public adversarial eval suite — measures ASR + utility-under-defense (IPI, skill/MCP poisoning, MINJA) against the real `umbra-core` pipeline. | umbra-core | **beta** |
 | **umbra-demo-repo** | Public demo / judge fixtures. | — | **planned** |
 
