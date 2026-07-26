@@ -18,7 +18,7 @@ reimplement governance — they emit or display the same **Admission Decision Pa
 | [**umbra**](https://github.com/bkd-dotcom/umbra) (hosted) | Production hosted platform / org console at [umbra.engineer](https://umbra.engineer). | umbra-core | **beta** |
 | [**umbra-action**](https://github.com/bkd-dotcom/umbra-action) | GitHub Action + Marketplace required check; posts the canonical PR comment and uploads the signed receipt. | umbra-core | **stable** |
 | [**umbra-plugins**](https://github.com/bkd-dotcom/umbra-plugins) | Original editor/agent plugins monorepo. Superseded by the per-agent repos below; kept for existing installs. | umbra-core | **beta** |
-| [**umbra-github-app**](https://github.com/bkd-dotcom/umbra-github-app) | GitHub App (PR comments, webhooks) via a short-lived installation token. | umbra-core | **planned** |
+| [**umbra-github-app**](https://github.com/bkd-dotcom/umbra-github-app) | GitHub App (PR comments, webhooks) via a short-lived installation token. Manifest + setup; served by the hosted `umbra`. | umbra-core | **beta** |
 | [**umbra-claude-code**](https://github.com/bkd-dotcom/umbra-claude-code) | Claude Code plugin: PreToolUse guard + MCP server + `/umbra:admit` skill. | umbra-core | **beta** |
 | [**umbra-cursor**](https://github.com/bkd-dotcom/umbra-cursor) | Cursor integration: MCP server + project rule. | umbra-core | **beta** |
 | [**umbra-codex**](https://github.com/bkd-dotcom/umbra-codex) | Codex integration: MCP server + lifecycle-hook guard. | umbra-core | **beta** |
