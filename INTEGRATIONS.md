@@ -26,7 +26,8 @@ reimplement governance — they emit or display the same **Admission Decision Pa
 | **umbra-copilot** | Copilot / coding-agent integration. | umbra-core | **planned** |
 | **umbra-vscode** | VS Code extension. | umbra-core | **planned** |
 | [**umbra-precommit**](https://github.com/bkd-dotcom/umbra-precommit) | Universal git / pre-commit hooks. | umbra-core | **beta** |
-| **umbra-eval** | Public adversarial eval suite — measures ASR + utility-under-defense (IPI, skill/MCP poisoning, MINJA) against the real `umbra-core` pipeline. | umbra-core | **beta** |
+| [**umbra-eval**](https://github.com/bkd-dotcom/umbra-eval) | Public adversarial eval suite — measures ASR + utility-under-defense (IPI, skill/MCP poisoning, MINJA) against the real `umbra-core` pipeline. | umbra-core | **beta** |
+| [**homebrew-umbra**](https://github.com/bkd-dotcom/homebrew-umbra) | Homebrew tap for the `umbra` CLI (`brew install bkd-dotcom/umbra/umbra`). | umbra-core (via PyPI) | **beta** |
 | **umbra-demo-repo** | Public demo / judge fixtures. | — | **planned** |
 
 ## Integration repo contract
