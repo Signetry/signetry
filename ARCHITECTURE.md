@@ -74,6 +74,17 @@ load CapabilityContract (.umbra/admission.yaml v2)
 - All integrations stuffed into one plugins monorepo
 - Orphan repos outside the org / not listed in this umbrella
 
+## Decision records
+
+Significant, deliberate design decisions are recorded as ADRs in the kernel so
+they are never mistaken for drift:
+
+- [ADR-0001 — Hosted receipt payload extends the kernel format](https://github.com/bkd-dotcom/umbra-core/blob/main/docs/adr/0001-hosted-receipt-payload-extends-kernel.md):
+  the hosted backend's receipt intentionally carries app fields
+  (`advisory_hash`, `codex_config`) the app-agnostic kernel does not; the signing
+  crypto is single-sourced, but the payload assemblers are deliberately not
+  unified (doing so would change live receipt hashes with no governance benefit).
+
 ---
 
 For the complete, current design — personas, UX templates, research anchors, and
