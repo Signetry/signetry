@@ -14,7 +14,7 @@ reimplement governance — they emit or display the same **Admission Decision Pa
 
 | Repo | Role | Depends on | Status |
 |---|---|---|---|
-| [**umbra-core**](https://github.com/bkd-dotcom/umbra-core) | The kernel — the only place governance logic lives: policy, guard, admit, dual verifier, plan binding, G1/G2/G3 gates, passport, receipt, SLSA/transparency, extension admission, CLI, MCP server. | — | **stable** |
+| [**umbra-core**](https://github.com/bkd-dotcom/umbra-core) | The kernel — the only place governance logic lives: policy, guard, admit, dual verifier, plan binding, G1/G2/G3 gates, passport, receipt, SLSA/transparency, extension admission, CLI, MCP server. Plus a **layered SAST detection engine** (`umbra scan`, 7 languages, cross-file taint, SARIF) and **governed fix fusion** (`umbra scan --fix`, bring-your-own-key, never merges). | — | **stable** |
 | [**umbra**](https://github.com/bkd-dotcom/umbra) (hosted) | Production hosted platform / org console at [umbra.engineer](https://umbra.engineer). | umbra-core | **beta** |
 | [**umbra-action**](https://github.com/bkd-dotcom/umbra-action) | GitHub Action + Marketplace required check; posts the canonical PR comment and uploads the signed receipt. | umbra-core | **stable** |
 | [**umbra-reviewer**](https://github.com/bkd-dotcom/umbra-reviewer) | Advisory PR reviewer — finds architecture + security issues, cross-verifies against deterministic gates, recommends safe/needs-human/block. Never merges on its own judgement; optional guarded auto-merge. | — (stdlib) | **beta** |
@@ -26,7 +26,7 @@ reimplement governance — they emit or display the same **Admission Decision Pa
 | **umbra-copilot** | Copilot / coding-agent integration. | umbra-core | **planned** |
 | **umbra-vscode** | VS Code extension. | umbra-core | **planned** |
 | [**umbra-precommit**](https://github.com/bkd-dotcom/umbra-precommit) | Universal git / pre-commit hooks. | umbra-core | **beta** |
-| [**umbra-eval**](https://github.com/bkd-dotcom/umbra-eval) | Public adversarial eval suite — measures ASR + utility-under-defense (IPI, skill/MCP poisoning, MINJA) against the real `umbra-core` pipeline. | umbra-core | **beta** |
+| [**umbra-eval**](https://github.com/bkd-dotcom/umbra-eval) | Public adversarial eval suite — measures ASR + utility-under-defense (IPI, skill/MCP poisoning, MINJA) against the real `umbra-core` pipeline. Also runs the **head-to-head detection benchmark**: a 52-case, 7-language public corpus where `umbra-core` scores **100% recall / 0 false positives** vs a top LLM scanner (Claude Opus 4.8) at 90% — deterministic, offline, free. | umbra-core | **beta** |
 | [**homebrew-umbra**](https://github.com/bkd-dotcom/homebrew-umbra) | Homebrew tap for the `umbra` CLI (`brew install bkd-dotcom/umbra/umbra`). | umbra-core (via PyPI) | **beta** |
 | **umbra-demo-repo** | Public demo / judge fixtures. | — | **planned** |
 
@@ -45,6 +45,7 @@ Every child repo must:
 ## Which one do I want?
 
 - **Gate every agent PR in CI** → [umbra-action](https://github.com/bkd-dotcom/umbra-action)
+- **Scan a repo for vulnerabilities (7 languages, SARIF) and govern the fix** → [umbra-core](https://github.com/bkd-dotcom/umbra-core) (`umbra scan .` · `umbra scan . --fix`)
 - **Govern an agent inside my editor** → [umbra-plugins](https://github.com/bkd-dotcom/umbra-plugins)
 - **A hosted dashboard for my org** → [umbra](https://umbra.engineer)
 - **Embed governance in my own tool / script / hook** → [umbra-core](https://github.com/bkd-dotcom/umbra-core) (`pip install umbra-core`)
