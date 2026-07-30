@@ -81,6 +81,8 @@ Detection is table stakes; the governance above is what the scanners don't attem
 - **Which repo do I want?** → [INTEGRATIONS.md](INTEGRATIONS.md)
 - **Which versions work together?** → [COMPATIBILITY.md](COMPATIBILITY.md)
 - **How do releases flow?** → [RELEASE.md](RELEASE.md)
+- **Want to contribute?** → [good first issues](https://github.com/bkd-dotcom/umbra-umbrella/issues/10) · [Discussions](https://github.com/bkd-dotcom/umbra-umbrella/discussions)
+- **Announcing / sharing Umbra?** → [LAUNCH.md](LAUNCH.md)
 
 ## License
 
