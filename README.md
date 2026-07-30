@@ -60,6 +60,20 @@ auditor can verify offline. `auto_merge` is always false — a human merges.
 
 See [ARCHITECTURE.md](ARCHITECTURE.md) for the full design (the source of truth).
 
+## Detect & fix, then govern
+
+`umbra-core` also **finds vulnerabilities** and can **govern the fix**. `umbra scan`
+is a deterministic, offline SAST engine across **7 languages** (Python, JavaScript,
+Go, Java, Ruby, PHP, C#) with cross-file taint and SARIF output; `umbra scan --fix`
+turns a finding into a bounded remediation an agent drafts under the admission
+pipeline, sealed in a signed receipt — **branch-only, never merged**,
+bring-your-own-key.
+
+On a public 52-case, 7-language head-to-head ([umbra-eval](https://github.com/bkd-dotcom/umbra-eval)),
+umbra-core reaches **100% recall at 0 false positives** — matching/leading a top LLM
+scanner (Claude Opus 4.8 at 90%) while staying deterministic, offline, and free.
+Detection is table stakes; the governance above is what the scanners don't attempt.
+
 ## Start here
 
 - **New to Umbra?** → [ARCHITECTURE.md](ARCHITECTURE.md)
