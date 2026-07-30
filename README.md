@@ -24,7 +24,7 @@ the one kernel every surface depends on. This repo is the map of the city.
 | Layer | What it is |
 |---|---|
 | **`umbra-umbrella`** (this repo) | The overview: architecture, integration catalog, compatibility matrix, release train, install map. |
-| **`umbra-core`** | The kernel — the *only* place governance logic lives (policy, guard, admit, dual verifier, plan binding, gates, passport, receipt, extension admission, CLI, MCP server). |
+| **`umbra-core`** | The kernel — the *only* place governance logic lives (policy, guard, admit, dual verifier, plan binding, gates, passport, receipt, extension admission, CLI, MCP server). Also ships the **layered SAST detection engine** (`umbra scan`, 7 languages, cross-file taint, SARIF) and **governed fix fusion** (`umbra scan --fix` → admission → signed receipt). |
 | **Each integration repo** | A district — its own release, CI, and Marketplace/plugin review; depends on pinned `umbra-core`. |
 | **Admission Decision Pack** | The same passport stamp used in every district. |
 
