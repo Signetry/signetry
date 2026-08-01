@@ -8,6 +8,10 @@
 
 **The umbrella overview for the Umbra platform — a change-control plane for coding agents.**
 
+[![Source-available](https://img.shields.io/badge/source-available-informational.svg)](README.md#contributing--source-available-prs-welcome)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome%20(CLA)-brightgreen.svg)](https://github.com/bkd-dotcom/umbra-umbrella/issues/10)
+[![Discussions](https://img.shields.io/badge/chat-Discussions-5865F2.svg)](https://github.com/bkd-dotcom/umbra-umbrella/discussions)
+
 [umbra.engineer](https://umbra.engineer) · [Architecture](ARCHITECTURE.md) · [Integrations](INTEGRATIONS.md) · [Compatibility](COMPATIBILITY.md) · [Install](INSTALL.md)
 
 </div>
@@ -77,6 +81,33 @@ On a public 52-case, 7-language head-to-head ([umbra-eval](https://github.com/bk
 umbra-core reaches **100% recall at 0 false positives** — matching/leading a top LLM
 scanner (Claude Opus 4.8 at 90%) while staying deterministic, offline, and free.
 Detection is table stakes; the governance above is what the scanners don't attempt.
+
+## Contributing — source-available, PRs welcome
+
+Umbra is **source-available**: the code is public to read, run for evaluation, and
+**contribute to** — but it is **not open source**. It is **All Rights Reserved
+(© 2026 Binay Dalai)**, and contributions are accepted under a
+**Contributor License Agreement**. In plain terms:
+
+- ✅ **You can** contribute, and you'll be **credited** (in `CONTRIBUTORS.md`, the Git
+  history, and release notes). You may truthfully say you contributed.
+- ❌ **You cannot** use, sell, sublicense, or commercialize the project, or present it
+  (in whole or part) as your own work or brand.
+- The **owner alone** retains the right to use and monetize the project.
+
+Contributing is easy and welcome:
+
+- 🌱 **Good first issues (tracking board):**
+  [bkd-dotcom/umbra-umbrella#10](https://github.com/bkd-dotcom/umbra-umbrella/issues/10)
+  — well-scoped tasks with exact files + acceptance criteria.
+- 💬 **Questions / ideas:** [Discussions](https://github.com/bkd-dotcom/umbra-umbrella/discussions)
+- 📝 **How to contribute + sign the CLA:** each repo's `CONTRIBUTING.md` and `CLA.md`
+  (e.g. [umbra-core](https://github.com/bkd-dotcom/umbra-core/blob/main/CONTRIBUTING.md)).
+  The best first PR is **adding a detection test case** in
+  [umbra-eval](https://github.com/bkd-dotcom/umbra-eval).
+
+The strongest contribution targets are **umbra-core** (the engine), **umbra-eval**
+(the benchmark), and **umbra-reviewer** — each has tests + CI to validate your PR.
 
 ## Start here
 
