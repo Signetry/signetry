@@ -12,8 +12,9 @@ umbra-core  →  integrations (action / plugins / app)  →  hosted (umbra)
 
 1. **umbra-core** ships first. A new capability (a contract field, a verifier
    path, a gate, an extension check) lands, is tested on Python 3.11/3.12/3.13,
-   passes its own `self-admission` check, and is published to PyPI with a
-   `CHANGELOG.md` entry and a SemVer tag.
+   passes its own `self-admission` check, and is released as a **GitHub Release +
+   SemVer git tag** with a `CHANGELOG.md` entry (umbra-core is source-available and
+   installed from source — not published to PyPI).
 2. **Integrations** bump their pinned `umbra-core` (see
    [COMPATIBILITY.md](COMPATIBILITY.md)) and cut their own tags. An integration
    never ships a capability ahead of the kernel that provides it.

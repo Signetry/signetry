@@ -64,7 +64,8 @@ diff budget). Capabilities can only **restrict** — they never widen authority.
 ## 3. (Optional) Govern locally + verify the receipt
 
 ```bash
-pip install "umbra-core>=0.3.0"
+# source-available (All Rights Reserved); not on PyPI — install from source
+pip install "umbra-core @ git+https://github.com/bkd-dotcom/umbra-core@v0.5.3"
 
 # Govern an agent's change on your machine (exits non-zero below branch-PR):
 umbra admit . --mission "bump the vulnerable dependency" --agent claude-code \

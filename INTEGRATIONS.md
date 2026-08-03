@@ -48,4 +48,4 @@ Every child repo must:
 - **Scan a repo for vulnerabilities (7 languages, SARIF) and govern the fix** → [umbra-core](https://github.com/bkd-dotcom/umbra-core) (`umbra scan .` · `umbra scan . --fix`)
 - **Govern an agent inside my editor** → [umbra-plugins](https://github.com/bkd-dotcom/umbra-plugins)
 - **A hosted dashboard for my org** → [umbra](https://umbra.engineer)
-- **Embed governance in my own tool / script / hook** → [umbra-core](https://github.com/bkd-dotcom/umbra-core) (`pip install umbra-core`)
+- **Embed governance in my own tool / script / hook** → [umbra-core](https://github.com/bkd-dotcom/umbra-core) (`pip install "umbra-core @ git+https://github.com/bkd-dotcom/umbra-core@v0.5.3"` — source-available, not on PyPI)
