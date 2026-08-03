@@ -40,7 +40,7 @@ rights, contributors are credited. 10 tagged good-first-issues.
 
 ```bash
 # source-available; installed from the source repo (not PyPI)
-pip install "umbra-core @ git+https://github.com/bkd-dotcom/umbra-core@v0.5.3"
+pip install "umbra-core @ git+https://github.com/bkd-dotcom/umbra-core@v0.5.4"
 git clone https://github.com/bkd-dotcom/umbra-eval && pip install -e umbra-eval
 umbra-eval corpus --markdown    # the 52-case, 7-language head-to-head table
 umbra scan .                    # scan any repo, offline & free
