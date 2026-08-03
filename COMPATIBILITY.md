@@ -32,6 +32,8 @@ the public API may change between minor versions.
 
 ## Rule
 
-An integration must **pin** its `umbra-core` dependency (`umbra-core>=X.Y.Z`) and
-never vendor or fork governance logic. If a surface needs a new capability, it
-lands in `umbra-core` first, is released, then the integration bumps its pin here.
+An integration must **pin** its `umbra-core` dependency to a source tag
+(`umbra-core @ git+https://github.com/bkd-dotcom/umbra-core@vX.Y.Z` — umbra-core is
+source-available and not on PyPI) and never vendor or fork governance logic. If a
+surface needs a new capability, it lands in `umbra-core` first, is released (a git
+tag), then the integration bumps its pin here.
