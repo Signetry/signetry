@@ -1,14 +1,14 @@
-# Install Umbra in a day
+# Install Signetry in a day
 
 The fastest path to a **governed, receipted** agent change: add the GitHub Action,
 drop a contract, get your first signed receipt. No hosted account required.
 
 ## 1. Add the required check (highest-reach choke point)
 
-Create `.github/workflows/umbra.yml` in your repo:
+Create `.github/workflows/signetry.yml` in your repo:
 
 ```yaml
-name: Umbra Admission
+name: Signetry Admission
 on:
   pull_request:
 permissions:
@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # umbra needs the base commit
+          fetch-depth: 0   # signetry needs the base commit
       - uses: Signetry/action@v1
         with:
           min-authority: "1"   # fail the check below L1 (tune to 2 to require branch-PR)
@@ -32,7 +32,7 @@ without it.
 
 ## 2. Drop an executable contract
 
-Create `.umbra/admission.yaml` to declare what a change may touch:
+Create `.signetry/admission.yaml` to declare what a change may touch:
 
 ```yaml
 version: 2
@@ -65,32 +65,32 @@ diff budget). Capabilities can only **restrict** — they never widen authority.
 
 ```bash
 # source-available (All Rights Reserved); not on PyPI — install from source
-pip install "umbra-core @ git+https://github.com/Signetry/core@v0.5.4"
+pip install "signetry-core @ git+https://github.com/Signetry/core@v0.6.0"
 
 # Govern an agent's change on your machine (exits non-zero below branch-PR):
-umbra admit . --mission "bump the vulnerable dependency" --agent claude-code \
+signetry admit . --mission "bump the vulnerable dependency" --agent claude-code \
   --receipt-out receipt.json
 
 # Verify the signed receipt against a pinned key, offline:
-umbra verify receipt.json --public-key "$UMBRA_PUBLIC_KEY"
+signetry verify receipt.json --public-key "$SIGNETRY_PUBLIC_KEY"
 
 # Read the proof gates and provenance:
-umbra gates receipt.json
-umbra provenance receipt.json     # in-toto / SLSA statement
+signetry gates receipt.json
+signetry provenance receipt.json     # in-toto / SLSA statement
 ```
 
 ## 4. (Optional) Govern your agent's extensions
 
 ```bash
 # Admit or deny a skill / MCP extension before it loads; emit an ASBOM:
-umbra admit-extension ./my-skill --repo .            # applies the contract allowlist
-umbra admit-extension ./my-mcp-server --asbom --org acme > asbom.json
+signetry admit-extension ./my-skill --repo .            # applies the contract allowlist
+signetry admit-extension ./my-mcp-server --asbom --org acme > asbom.json
 ```
 
 ## 5. (Optional) Editor + hosted
 
 - **Editor guard** (allow/deny before a bad edit runs): see
-  [umbra-plugins](https://github.com/Signetry/plugins).
+  [signetry-plugins](https://github.com/Signetry/plugins).
 - **Hosted dashboard** (multi-repo, passports, brake, receipts/audit):
   [umbra.engineer](https://umbra.engineer).
 
@@ -98,6 +98,6 @@ umbra admit-extension ./my-mcp-server --asbom --org acme > asbom.json
 
 - A required GitHub check that fails below your authority bar.
 - A canonical PR comment (verdict, contract, trust boundary, checks, verifier,
-  proof gates, receipt hash) — identical wherever Umbra runs.
+  proof gates, receipt hash) — identical wherever Signetry runs.
 - An Ed25519-signed receipt you can verify offline, forever.
-- `auto_merge` is always false. Umbra governs the agent; a human merges.
+- `auto_merge` is always false. Signetry governs the agent; a human merges.
