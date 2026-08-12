@@ -6,6 +6,41 @@ marketing that outruns the evidence.
 
 ---
 
+## Ready-to-post blurbs (copy-paste)
+
+**X / Twitter (≤280 chars)**
+> Coding agents can open PRs now. Who decides how much authority each change earned?
+>
+> Signetry: an admission pipeline that governs any agent's PR and seals the verdict in an Ed25519 receipt. Deterministic SAST too (7 langs, 0-FP).
+>
+> https://signetry.github.io
+
+**X — alt, seal angle**
+> A signet is the seal that authenticates a document. Signetry seals a *verified code change* — earned authority, in a signed receipt. auto_merge is always false; a human merges. Source-available. https://signetry.github.io
+
+**Show HN — title**
+> Show HN: Signetry – govern any coding agent's PR and prove it with a signed receipt
+
+**Show HN — first comment**
+> Coding agents (Claude Code, Codex, Cursor, Copilot) change repos now, and they read attacker-reachable text (READMEs, issues) that can steer them. I wanted the *merge decision* to be accountable, not vibes.
+>
+> Signetry runs every change through one deterministic pipeline: executable contract → on-disk quarantine of untrusted text → required checks → an independent verifier the patch-writer can't bypass → earned authority (observe / analyze / branch-PR) → an Ed25519-signed receipt that maps to in-toto/SLSA provenance. Make it a required check and nothing merges without a receipt. `auto_merge` is always false.
+>
+> It also ships a deterministic, offline SAST engine (`signetry scan`, 7 languages, cross-file taint, SARIF). On a public 52-case benchmark it's 100% recall at 0 false positives.
+>
+> Source-available (All Rights Reserved), install from source, govern PRs via a GitHub Action. Feedback welcome — especially on the threat model.
+>
+> Site: https://signetry.github.io · Code: https://github.com/Signetry
+
+**LinkedIn**
+> Coding agents can change your repository. The missing piece isn't detection — it's a governed, provable *decision* about how much authority a given change earned.
+>
+> Signetry is a change-control plane for coding agents: an executable contract, prompt-injection quarantine, an independent verifier, earned authority, and an Ed25519-signed receipt for every decision. Deterministic SAST included (7 languages, 0 false positives on a public benchmark). A human always merges.
+>
+> Source-available and contributor-friendly under a CLA. → https://signetry.github.io
+
+---
+
 ## One-liner
 
 > **Signetry is a change-control plane for coding agents.** It finds vulnerabilities,
