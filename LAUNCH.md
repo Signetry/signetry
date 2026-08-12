@@ -40,21 +40,21 @@ rights, contributors are credited. 10 tagged good-first-issues.
 
 ```bash
 # source-available; installed from the source repo (not PyPI)
-pip install "umbra-core @ git+https://github.com/bkd-dotcom/umbra-core@v0.5.4"
-git clone https://github.com/bkd-dotcom/umbra-eval && pip install -e umbra-eval
+pip install "umbra-core @ git+https://github.com/Signetry/core@v0.5.4"
+git clone https://github.com/Signetry/eval && pip install -e umbra-eval
 umbra-eval corpus --markdown    # the 52-case, 7-language head-to-head table
 umbra scan .                    # scan any repo, offline & free
 ```
 
 ## Links
 
-- **Overview / start here:** https://github.com/bkd-dotcom/umbra-umbrella
-- **Kernel (`umbra-core`, source-available):** https://github.com/bkd-dotcom/umbra-core
-- **Benchmark (`umbra-eval`):** https://github.com/bkd-dotcom/umbra-eval
+- **Overview / start here:** https://github.com/Signetry/signetry
+- **Kernel (`umbra-core`, source-available):** https://github.com/Signetry/core
+- **Benchmark (`umbra-eval`):** https://github.com/Signetry/eval
 - **GitHub Action:** https://github.com/marketplace/actions/umbra-admission
 - **Contribute — good first issues:**
-  https://github.com/bkd-dotcom/umbra-umbrella/issues/10
-- **Discuss:** https://github.com/bkd-dotcom/umbra-umbrella/discussions
+  https://github.com/Signetry/signetry/issues/10
+- **Discuss:** https://github.com/Signetry/signetry/discussions
 
 ## Talking to contributors
 

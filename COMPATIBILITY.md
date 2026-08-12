@@ -1,6 +1,6 @@
 # Compatibility matrix
 
-Which [`umbra-core`](https://github.com/bkd-dotcom/umbra-core) version each
+Which [`umbra-core`](https://github.com/Signetry/core) version each
 integration supports. Every integration pins a **minimum** `umbra-core` and is
 tested against it. The kernel follows [SemVer](https://semver.org/); until `1.0.0`
 the public API may change between minor versions.
@@ -33,7 +33,7 @@ the public API may change between minor versions.
 ## Rule
 
 An integration must **pin** its `umbra-core` dependency to a source tag
-(`umbra-core @ git+https://github.com/bkd-dotcom/umbra-core@vX.Y.Z` — umbra-core is
+(`umbra-core @ git+https://github.com/Signetry/core@vX.Y.Z` — umbra-core is
 source-available and not on PyPI) and never vendor or fork governance logic. If a
 surface needs a new capability, it lands in `umbra-core` first, is released (a git
 tag), then the integration bumps its pin here.

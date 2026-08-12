@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0   # umbra needs the base commit
-      - uses: bkd-dotcom/umbra-action@v1
+      - uses: Signetry/action@v1
         with:
           min-authority: "1"   # fail the check below L1 (tune to 2 to require branch-PR)
 ```
@@ -65,7 +65,7 @@ diff budget). Capabilities can only **restrict** — they never widen authority.
 
 ```bash
 # source-available (All Rights Reserved); not on PyPI — install from source
-pip install "umbra-core @ git+https://github.com/bkd-dotcom/umbra-core@v0.5.4"
+pip install "umbra-core @ git+https://github.com/Signetry/core@v0.5.4"
 
 # Govern an agent's change on your machine (exits non-zero below branch-PR):
 umbra admit . --mission "bump the vulnerable dependency" --agent claude-code \
@@ -90,7 +90,7 @@ umbra admit-extension ./my-mcp-server --asbom --org acme > asbom.json
 ## 5. (Optional) Editor + hosted
 
 - **Editor guard** (allow/deny before a bad edit runs): see
-  [umbra-plugins](https://github.com/bkd-dotcom/umbra-plugins).
+  [umbra-plugins](https://github.com/Signetry/plugins).
 - **Hosted dashboard** (multi-repo, passports, brake, receipts/audit):
   [umbra.engineer](https://umbra.engineer).
 
