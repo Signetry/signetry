@@ -79,7 +79,7 @@ load CapabilityContract (.umbra/admission.yaml v2)
 Significant, deliberate design decisions are recorded as ADRs in the kernel so
 they are never mistaken for drift:
 
-- [ADR-0001 — Hosted receipt payload extends the kernel format](https://github.com/bkd-dotcom/umbra-core/blob/main/docs/adr/0001-hosted-receipt-payload-extends-kernel.md):
+- [ADR-0001 — Hosted receipt payload extends the kernel format](https://github.com/Signetry/core/blob/main/docs/adr/0001-hosted-receipt-payload-extends-kernel.md):
   the hosted backend's receipt intentionally carries app fields
   (`advisory_hash`, `codex_config`) the app-agnostic kernel does not; the signing
   crypto is single-sourced, but the payload assemblers are deliberately not
