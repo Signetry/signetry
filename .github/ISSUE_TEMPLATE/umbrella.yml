@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        This repository is the **overview** of the Umbra platform — it holds no
+        This repository is the **overview** of the Signetry platform — it holds no
         governance code. If your issue is about a specific component, please open
         it in that repo instead (the blank-issue links route you there).
   - type: dropdown

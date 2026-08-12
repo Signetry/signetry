@@ -1,6 +1,6 @@
-# Umbra — launch & announcement kit
+# Signetry — launch & announcement kit
 
-Shareable, honest copy for announcing Umbra. Every claim here is backed by a
+Shareable, honest copy for announcing Signetry. Every claim here is backed by a
 reproducible artifact (a benchmark, a signed receipt, a released package) — no
 marketing that outruns the evidence.
 
@@ -8,21 +8,21 @@ marketing that outruns the evidence.
 
 ## One-liner
 
-> **Umbra is a change-control plane for coding agents.** It finds vulnerabilities,
+> **Signetry is a change-control plane for coding agents.** It finds vulnerabilities,
 > lets an agent draft the fix under a governed admission pipeline, and proves every
 > decision with a signed receipt — branch-only, never merged.
 
 ## Short post (Show HN / LinkedIn / blog intro)
 
-Coding agents can now change your repository. Umbra is the layer that decides how
+Coding agents can now change your repository. Signetry is the layer that decides how
 much authority a change has *earned* — and proves it.
 
-- **Detect.** `umbra scan` is a deterministic, offline SAST engine across 7
+- **Detect.** `signetry scan` is a deterministic, offline SAST engine across 7
   languages (Python, JavaScript, Go, Java, Ruby, PHP, C#) with cross-file taint and
   SARIF output. On a public 52-case benchmark it hits **100% recall at 0 false
   positives** — matching/leading a top LLM scanner (Claude Opus 4.8 at 90%) while
   staying free and reproducible.
-- **Fix, governed.** `umbra scan --fix` hands a finding to a live agent (Codex /
+- **Fix, governed.** `signetry scan --fix` hands a finding to a live agent (Codex /
   Claude Code / any adapter, bring-your-own-key), runs the draft through a contract
   → prompt-injection quarantine → required checks → independent verifier, and grants
   only the authority the run earned (L0/L1/L2). L2 opens a **branch-only PR** with an
@@ -40,17 +40,17 @@ rights, contributors are credited. 10 tagged good-first-issues.
 
 ```bash
 # source-available; installed from the source repo (not PyPI)
-pip install "umbra-core @ git+https://github.com/Signetry/core@v0.5.4"
-git clone https://github.com/Signetry/eval && pip install -e umbra-eval
-umbra-eval corpus --markdown    # the 52-case, 7-language head-to-head table
-umbra scan .                    # scan any repo, offline & free
+pip install "signetry-core @ git+https://github.com/Signetry/core@v0.6.0"
+git clone https://github.com/Signetry/eval && pip install -e signetry-eval
+signetry-eval corpus --markdown    # the 52-case, 7-language head-to-head table
+signetry scan .                    # scan any repo, offline & free
 ```
 
 ## Links
 
 - **Overview / start here:** https://github.com/Signetry/signetry
-- **Kernel (`umbra-core`, source-available):** https://github.com/Signetry/core
-- **Benchmark (`umbra-eval`):** https://github.com/Signetry/eval
+- **Kernel (`signetry-core`, source-available):** https://github.com/Signetry/core
+- **Benchmark (`signetry-eval`):** https://github.com/Signetry/eval
 - **GitHub Action:** https://github.com/marketplace/actions/umbra-admission
 - **Contribute — good first issues:**
   https://github.com/Signetry/signetry/issues/10
@@ -64,12 +64,12 @@ or right to use/sell it. A bot asks for a one-line CLA signature on the first PR
 
 The three flagship repos accept real code:
 
-- **umbra-core** — add a detection rule or an executor adapter (highest value).
-- **umbra-eval** — add a corpus test case (lowest barrier; each is self-contained).
-- **umbra-reviewer** — add a deterministic PR-diff check.
+- **signetry-core** — add a detection rule or an executor adapter (highest value).
+- **signetry-eval** — add a corpus test case (lowest barrier; each is self-contained).
+- **signetry-reviewer** — add a deterministic PR-diff check.
 
 Each has `CONTRIBUTING.md`, `CLA.md`, and `CODE_OF_CONDUCT.md`. Ground rules:
-governance stays in `umbra-core`; SAFE cases must stay 0-FP; every change ships with
+governance stays in `signetry-core`; SAFE cases must stay 0-FP; every change ships with
 a test and passes CI; contributions are under the CLA (credited, ownership assigned
 to the owner).
 
@@ -81,8 +81,8 @@ to the owner).
   sanitizers); the deterministic engine is 0-FP on the corpus, which is why Semgrep
   is opt-in and non-gating.
 - A dev-key receipt proves nothing to a third party (flagged `key_ephemeral`); set a
-  production `UMBRA_SIGNING_KEY` and pin its public key.
-- `auto_merge` is false at every level. Umbra is the governance layer between the
+  production `SIGNETRY_SIGNING_KEY` and pin its public key.
+- `auto_merge` is false at every level. Signetry is the governance layer between the
   agent and the human — not a replacement for code review.
 - **Source-available, not open source.** The code is public to read and contribute
   to, but it's All Rights Reserved — don't call it "open source." Contributions are

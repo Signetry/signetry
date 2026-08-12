@@ -1,14 +1,14 @@
 blank_issues_enabled: false
 contact_links:
-  - name: umbra-core (kernel — governance logic, CLI, MCP, admission pipeline)
+  - name: signetry-core (kernel — governance logic, CLI, MCP, admission pipeline)
     url: https://github.com/Signetry/core/issues/new/choose
-    about: Bugs or requests about the admission pipeline, contract, verifier, gates, receipts, or the umbra CLI/MCP server.
-  - name: umbra-action (GitHub Action / required check)
+    about: Bugs or requests about the admission pipeline, contract, verifier, gates, receipts, or the signetry CLI/MCP server.
+  - name: signetry-action (GitHub Action / required check)
     url: https://github.com/Signetry/action/issues/new/choose
     about: Issues with the GitHub Action, PR comment, receipt artifact, or the CI authority gate.
-  - name: umbra-plugins (editor/agent plugins)
+  - name: signetry-plugins (editor/agent plugins)
     url: https://github.com/Signetry/plugins/issues/new/choose
     about: Issues with the Claude Code / Cursor / Codex / universal git-hook plugins.
-  - name: umbra (hosted platform / umbra.engineer)
+  - name: signetry (hosted platform / umbra.engineer)
     url: https://github.com/bkd-dotcom/umbra/issues/new/choose
     about: Issues with the hosted dashboard, sign-in, email reports, or the GitHub App.
