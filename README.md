@@ -1,4 +1,4 @@
-<p align="center"><img src="docs/assets/brand/mark.png" alt="signetry" width="120" height="120"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Signetry/signetry/main/docs/assets/brand/mark.png" alt="signetry" width="120" height="120"/></p>
 <h1 align="center">signetry</h1>
 <p align="center"><em>Seal every agent's PR with proof — earned authority in a signed receipt.</em></p>
 
