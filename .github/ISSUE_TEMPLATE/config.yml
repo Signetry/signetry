@@ -9,6 +9,6 @@ contact_links:
   - name: signetry-plugins (editor/agent plugins)
     url: https://github.com/Signetry/plugins/issues/new/choose
     about: Issues with the Claude Code / Cursor / Codex / universal git-hook plugins.
-  - name: signetry (hosted platform / umbra.engineer)
-    url: https://github.com/bkd-dotcom/umbra/issues/new/choose
+  - name: signetry (hosted platform / signetry.github.io)
+    url: https://github.com/Signetry/signetry/issues/new/choose
     about: Issues with the hosted dashboard, sign-in, email reports, or the GitHub App.

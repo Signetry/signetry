@@ -86,7 +86,7 @@ signetry scan .                    # scan any repo, offline & free
 - **Overview / start here:** https://github.com/Signetry/signetry
 - **Kernel (`signetry-core`, source-available):** https://github.com/Signetry/core
 - **Benchmark (`signetry-eval`):** https://github.com/Signetry/eval
-- **GitHub Action:** https://github.com/marketplace/actions/umbra-admission
+- **GitHub Action:** https://github.com/marketplace/actions/signetry-admission
 - **Contribute — good first issues:**
   https://github.com/Signetry/signetry/issues/10
 - **Discuss:** https://github.com/Signetry/signetry/discussions

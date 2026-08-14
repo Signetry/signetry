@@ -1,7 +1,7 @@
 # Signetry Platform Architecture
 
 > **Canonical source of truth:** the full architecture document lives at
-> [`bkd-dotcom/umbra` → `docs/ARCHITECTURE.md`](https://github.com/bkd-dotcom/umbra/blob/main/docs/ARCHITECTURE.md)
+> [`bkd-dotcom/signetry` → `docs/ARCHITECTURE.md`](https://github.com/Signetry/signetry/blob/main/ARCHITECTURE.md)
 > during the current transition. This page is the umbrella's overview and links
 > into it; when the platform stabilizes, the canonical document is promoted here
 > as the permanent home.
@@ -89,4 +89,4 @@ they are never mistaken for drift:
 
 For the complete, current design — personas, UX templates, research anchors, and
 the "not a demo" hosted-UI checklist — read the
-[canonical architecture document](https://github.com/bkd-dotcom/umbra/blob/main/docs/ARCHITECTURE.md).
+[canonical architecture document](https://github.com/Signetry/signetry/blob/main/ARCHITECTURE.md).

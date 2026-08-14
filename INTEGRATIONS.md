@@ -15,7 +15,7 @@ reimplement governance — they emit or display the same **Admission Decision Pa
 | Repo | Role | Depends on | Status |
 |---|---|---|---|
 | [**signetry-core**](https://github.com/Signetry/core) | The kernel — the only place governance logic lives: policy, guard, admit, dual verifier, plan binding, G1/G2/G3 gates, passport, receipt, SLSA/transparency, extension admission, CLI, MCP server. Plus a **layered SAST detection engine** (`signetry scan`, 7 languages, cross-file taint, SARIF) and **governed fix fusion** (`signetry scan --fix`, bring-your-own-key, never merges). | — | **stable** |
-| [**signetry**](https://github.com/bkd-dotcom/umbra) (hosted) | Production hosted platform / org console at [umbra.engineer](https://umbra.engineer). | signetry-core | **beta** |
+| [**signetry**](https://github.com/Signetry/core) (hosted) | Production hosted platform / org console at [signetry.github.io](https://signetry.github.io). | signetry-core | **beta** |
 | [**signetry-action**](https://github.com/Signetry/action) | GitHub Action + Marketplace required check; posts the canonical PR comment and uploads the signed receipt. | signetry-core | **stable** |
 | [**signetry-reviewer**](https://github.com/Signetry/reviewer) | Advisory PR reviewer — finds architecture + security issues, cross-verifies against deterministic gates, recommends safe/needs-human/block. Never merges on its own judgement; optional guarded auto-merge. | — (stdlib) | **beta** |
 | [**signetry-plugins**](https://github.com/Signetry/plugins) | Original editor/agent plugins monorepo. Superseded by the per-agent repos below; kept for existing installs. | signetry-core | **beta** |
@@ -47,5 +47,5 @@ Every child repo must:
 - **Gate every agent PR in CI** → [signetry-action](https://github.com/Signetry/action)
 - **Scan a repo for vulnerabilities (7 languages, SARIF) and govern the fix** → [signetry-core](https://github.com/Signetry/core) (`signetry scan .` · `signetry scan . --fix`)
 - **Govern an agent inside my editor** → [signetry-plugins](https://github.com/Signetry/plugins)
-- **A hosted dashboard for my org** → [signetry](https://umbra.engineer)
+- **A hosted dashboard for my org** → [signetry](https://signetry.github.io)
 - **Embed governance in my own tool / script / hook** → [signetry-core](https://github.com/Signetry/core) (`pip install "signetry-core @ git+https://github.com/Signetry/core@v0.6.0"` — source-available, not on PyPI)
