@@ -92,7 +92,7 @@ signetry admit-extension ./my-mcp-server --asbom --org acme > asbom.json
 - **Editor guard** (allow/deny before a bad edit runs): see
   [signetry-plugins](https://github.com/Signetry/plugins).
 - **Hosted dashboard** (multi-repo, passports, brake, receipts/audit):
-  [umbra.engineer](https://umbra.engineer).
+  [signetry.github.io](https://signetry.github.io).
 
 ## What you get
 
