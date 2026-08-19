@@ -75,7 +75,7 @@ rights, contributors are credited. 10 tagged good-first-issues.
 
 ```bash
 # source-available; installed from the source repo (not PyPI)
-pip install "signetry-core @ git+https://github.com/Signetry/core@v0.6.0"
+pip install "signetry-core @ git+https://github.com/Signetry/core@v0.7.0"
 git clone https://github.com/Signetry/eval && pip install -e signetry-eval
 signetry-eval corpus --markdown    # the 52-case, 7-language head-to-head table
 signetry scan .                    # scan any repo, offline & free

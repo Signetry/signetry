@@ -65,7 +65,7 @@ diff budget). Capabilities can only **restrict** — they never widen authority.
 
 ```bash
 # source-available (All Rights Reserved); not on PyPI — install from source
-pip install "signetry-core @ git+https://github.com/Signetry/core@v0.6.0"
+pip install "signetry-core @ git+https://github.com/Signetry/core@v0.7.0"
 
 # Govern an agent's change on your machine (exits non-zero below branch-PR):
 signetry admit . --mission "bump the vulnerable dependency" --agent claude-code \
