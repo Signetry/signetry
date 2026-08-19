@@ -48,4 +48,4 @@ Every child repo must:
 - **Scan a repo for vulnerabilities (7 languages, SARIF) and govern the fix** → [signetry-core](https://github.com/Signetry/core) (`signetry scan .` · `signetry scan . --fix`)
 - **Govern an agent inside my editor** → [signetry-plugins](https://github.com/Signetry/plugins)
 - **A hosted dashboard for my org** → [signetry](https://signetry.github.io)
-- **Embed governance in my own tool / script / hook** → [signetry-core](https://github.com/Signetry/core) (`pip install "signetry-core @ git+https://github.com/Signetry/core@v0.6.0"` — source-available, not on PyPI)
+- **Embed governance in my own tool / script / hook** → [signetry-core](https://github.com/Signetry/core) (`pip install "signetry-core @ git+https://github.com/Signetry/core@v0.7.0"` — source-available, not on PyPI)
