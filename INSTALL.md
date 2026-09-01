@@ -64,7 +64,7 @@ diff budget). Capabilities can only **restrict** — they never widen authority.
 ## 3. (Optional) Govern locally + verify the receipt
 
 ```bash
-# source-available (All Rights Reserved); not on PyPI — install from source
+# BUSL-1.1 (Apache-2.0 on 2030-08-31); not on PyPI — install from source
 pip install "signetry-core @ git+https://github.com/Signetry/core@v0.7.0"
 
 # Govern an agent's change on your machine (exits non-zero below branch-PR):
