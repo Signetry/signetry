@@ -61,11 +61,18 @@ answer is faster for both of us than a lawyer.
 ## The receipt format is deliberately unencumbered
 
 The [receipt specification](https://github.com/Signetry/core/blob/main/docs/RECEIPT_SPEC.md)
-and its conformance suite are **Apache-2.0**, and the format is versioned
-independently of the engine. A receipt is meant to outlive the tool that issued it:
-an auditor in 2032 must be able to verify a receipt written in 2026 without running,
-trusting, or licensing anything from us. If you want to write a competing issuer or an
-independent verifier against the spec, that is a supported use, not a tolerated one.
+and its [conformance suite](https://github.com/Signetry/core/tree/main/tests/conformance)
+are **Apache-2.0**, and the format is versioned independently of the engine. This is
+not a footnote: both are named as explicit exclusions from the BUSL `Licensed Work`
+parameter in [`core/LICENSE`](https://github.com/Signetry/core/blob/main/LICENSE), so
+they carry no restriction and no Change Date.
+
+A receipt is meant to outlive the tool that issued it: an auditor in 2032 must be able
+to verify a receipt written in 2026 without running, trusting, or licensing anything
+from us. If you want to write a competing issuer or an independent verifier against
+the spec, that is a supported use, not a tolerated one — the conformance vectors are
+language-agnostic JSON with published test-key seeds precisely so you can check your
+implementation against ours.
 
 ## Contributions
 
