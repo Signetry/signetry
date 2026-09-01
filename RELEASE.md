@@ -27,7 +27,7 @@ signetry-core  →  integrations (action / plugins / app)  →  hosted (signetry
 
 - All repos use [SemVer](https://semver.org/). Until `signetry-core` reaches `1.0.0`,
   minor versions may change the public API — integrations pin a minimum and test.
-- Actions publish a **moving major tag** (`@v1`) plus exact tags (`@v0.3.0`).
+- Actions publish a **moving major tag** (`@v1`) plus exact tags (`@v0.5.0`).
 - Never re-tag a released version; cut a new patch instead.
 
 ## Invariants that survive every release
@@ -43,6 +43,17 @@ signetry-core  →  integrations (action / plugins / app)  →  hosted (signetry
 - [ ] `CHANGELOG.md` moved from `Unreleased` to the new version + date
 - [ ] `pyproject.toml` version bumped
 - [ ] tests green on 3.11 / 3.12 / 3.13; `self-admission` green; ruff clean
-- [ ] tag `vX.Y.Z` pushed; PyPI publish
+- [ ] every `core@vX.Y.Z` pin swept, **including `install.sh`'s default `VERSION`** — a
+      default that lags is the one nobody greps for, and it silently installs an old
+      kernel for everyone who uses the one-liner
+- [ ] tag `vX.Y.Z` pushed — `release.yml` cuts the GitHub Release and attaches the
+      wheel. **No PyPI publish:** the kernel has been source-available since `0.5.4`
+      and is installed from a git tag
 - [ ] COMPATIBILITY.md updated in this umbrella
 - [ ] dependent integrations' pins bumped and released
+- [ ] each integration's moving `@vN` tag repointed at its new release — `@vN` is
+      validated for *existence*, never against the newest tag, so one that stops moving
+      cannot be detected as stale and keeps serving old code to everyone pinning it
+- [ ] `python3 tools/check_versions.py` green in
+      [signetry.github.io](https://github.com/Signetry/signetry.github.io) — the landing
+      page's install command is a hand-maintained claim
