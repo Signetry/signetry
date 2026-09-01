@@ -28,7 +28,7 @@ marketing that outruns the evidence.
 >
 > It also ships a deterministic, offline SAST engine (`signetry scan`, 7 languages, cross-file taint, SARIF). On a public 52-case benchmark it's 100% recall at 0 false positives.
 >
-> Source-available (All Rights Reserved), install from source, govern PRs via a GitHub Action. Feedback welcome — especially on the threat model.
+> Open core: the integrations are Apache-2.0, the engine is BUSL-1.1 (Apache-2.0 in 2030). Install from source, govern PRs via a GitHub Action. Feedback welcome — especially on the threat model.
 >
 > Site: https://signetry.github.io · Code: https://github.com/Signetry
 
@@ -67,9 +67,13 @@ much authority a change has *earned* — and proves it.
   patch-writer can't bypass; and a receipt an auditor verifies offline. No scanner
   attempts that.
 
-**Source-available** (All Rights Reserved — *not* open source), on the GitHub
-Marketplace. Read it, evaluate it, and contribute under a CLA — the owner retains all
-rights, contributors are credited. 10 tagged good-first-issues.
+**Open core**, on the GitHub Marketplace: every integration — the Action, the editor
+and agent plugins, the pre-commit guard, the eval suite, the receipt spec — is
+**Apache-2.0**, so you can fork it and ship it commercially with no strings. The engine
+is **BUSL-1.1**: read it, run it, use it in production to govern your own repos; the one
+carve-out is reselling it as a competing hosted service, and it converts to Apache-2.0
+on 2030-08-31. Contributions go through a CLA and are credited.
+10 tagged good-first-issues.
 
 ## Reproduce the headline claim
 
@@ -93,9 +97,12 @@ signetry scan .                    # scan any repo, offline & free
 
 ## Talking to contributors
 
-**Source-available, contribute under a CLA.** The project is All Rights Reserved;
-contributors are **credited** (CONTRIBUTORS.md, release notes) but gain no ownership
-or right to use/sell it. A bot asks for a one-line CLA signature on the first PR.
+**Apache-2.0 integrations, BUSL-1.1 engine, contribute under a CLA.** Contributors are
+**credited** (CONTRIBUTORS.md, release notes) and keep every right the licence grants
+anyone — on the Apache-2.0 repos that includes commercial use of their own work. Be
+upfront that the CLA assigns copyright in a merged contribution to the maintainer, and
+why: code moves across the open-core line. A bot asks for a one-line signature on the
+first PR. Full map: LICENSING.md.
 
 The three flagship repos accept real code:
 
@@ -119,6 +126,9 @@ to the owner).
   production `SIGNETRY_SIGNING_KEY` and pin its public key.
 - `auto_merge` is false at every level. Signetry is the governance layer between the
   agent and the human — not a replacement for code review.
-- **Source-available, not open source.** The code is public to read and contribute
-  to, but it's All Rights Reserved — don't call it "open source." Contributions are
-  credited and accepted under a CLA; the owner retains all rights.
+- **Say "open core", and be precise about which half.** The integration surface is
+  Apache-2.0 — that half genuinely is open source, so don't undersell it. The engine is
+  BUSL-1.1, which is **source-available, not OSI open source**: don't call `core` "open
+  source", and don't let a headline imply the whole platform is BUSL either. If someone
+  asks whether they can use it at work, the answer is yes — point them at LICENSING.md
+  rather than hedging.

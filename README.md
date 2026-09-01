@@ -4,14 +4,10 @@
 
 <div align="center">
 
-> **Copyright (c) 2026 Binay Dalai. All rights reserved.**
-> This repository is strictly for viewing and contributing to the original project. You may not use, copy, modify, distribute, or commercialize this code for your own personal or commercial projects without explicit written permission. Only the original author retains the right to use and monetize this project.
-
-
 **The umbrella overview for the Signetry platform — a change-control plane for coding agents.**
 
-[![Source-available](https://img.shields.io/badge/source-available-informational.svg)](README.md#contributing--source-available-prs-welcome)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome%20(CLA)-brightgreen.svg)](https://github.com/Signetry/signetry/issues/10)
+[![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome%20(CLA)-brightgreen.svg)](CONTRIBUTING.md)
 [![Discussions](https://img.shields.io/badge/chat-Discussions-5865F2.svg)](https://github.com/Signetry/signetry/discussions)
 
 [signetry.github.io](https://signetry.github.io) · [Architecture](ARCHITECTURE.md) · [Integrations](INTEGRATIONS.md) · [Compatibility](COMPATIBILITY.md) · [Install](INSTALL.md)
@@ -84,18 +80,21 @@ signetry-core reaches **100% recall at 0 false positives** — matching/leading 
 scanner (Claude Opus 4.8 at 90%) while staying deterministic, offline, and free.
 Detection is table stakes; the governance above is what the scanners don't attempt.
 
-## Contributing — source-available, PRs welcome
+## Contributing — Apache-2.0, PRs welcome
 
-Signetry is **source-available**: the code is public to read, run for evaluation, and
-**contribute to** — but it is **not open source**. It is **All Rights Reserved
-(© 2026 Binay Dalai)**, and contributions are accepted under a
-**Contributor License Agreement**. In plain terms:
+Signetry is **open core**. This umbrella repo and the whole integration surface are
+**[Apache-2.0](LICENSE)**: read it, run it, fork it, ship it commercially — no
+permission needed, no strings. The engine
+([`signetry-core`](https://github.com/Signetry/core)) is source-available under
+BUSL-1.1 and converts to Apache-2.0 on **2030-08-31**. Full map:
+[LICENSING.md](LICENSING.md).
 
-- ✅ **You can** contribute, and you'll be **credited** (in `CONTRIBUTORS.md`, the Git
-  history, and release notes). You may truthfully say you contributed.
-- ❌ **You cannot** use, sell, sublicense, or commercialize the project, or present it
-  (in whole or part) as your own work or brand.
-- The **owner alone** retains the right to use and monetize the project.
+Contributions are accepted under a **[Contributor License Agreement](CLA.md)** — kept
+deliberately, because code moves across the open-core line: an adapter contributed
+here may later be promoted into the engine, and engine code is released outward as
+its licence converts. The CLA is what lets that happen without re-asking every
+contributor. You keep every right the licence gives everyone else, and you are
+**credited** in `CONTRIBUTORS.md`, the Git history, and release notes.
 
 Contributing is easy and welcome:
 
@@ -103,7 +102,8 @@ Contributing is easy and welcome:
   [Signetry/signetry#10](https://github.com/Signetry/signetry/issues/10)
   — well-scoped tasks with exact files + acceptance criteria.
 - 💬 **Questions / ideas:** [Discussions](https://github.com/Signetry/signetry/discussions)
-- 📝 **How to contribute + sign the CLA:** each repo's `CONTRIBUTING.md` and `CLA.md`
+- 📝 **How to contribute + sign the CLA:** [CONTRIBUTING.md](CONTRIBUTING.md) here, plus
+  each child repo's own `CONTRIBUTING.md` and `CLA.md`
   (e.g. [signetry-core](https://github.com/Signetry/core/blob/main/CONTRIBUTING.md)).
   The best first PR is **adding a detection test case** in
   [signetry-eval](https://github.com/Signetry/eval).
@@ -120,10 +120,11 @@ The strongest contribution targets are **signetry-core** (the engine), **signetr
 - **How do releases flow?** → [RELEASE.md](RELEASE.md)
 - **Want to contribute?** → [good first issues](https://github.com/Signetry/signetry/issues/10) · [Discussions](https://github.com/Signetry/signetry/discussions)
 - **Announcing / sharing Signetry?** → [LAUNCH.md](LAUNCH.md)
+- **What is licensed how?** → [LICENSING.md](LICENSING.md)
 
 ## Contributors
 
-Gratefully credited for contributions accepted under the [CLA](CLA.md) — **credit, not ownership**. Each grid links to that repo's contributor graph and updates automatically.
+Gratefully credited for contributions accepted under the [CLA](CLA.md), which keeps code free to move across the [open-core line](LICENSING.md). Each grid links to that repo's contributor graph and updates automatically.
 
 <table>
   <tr>
@@ -162,4 +163,12 @@ Gratefully credited for contributions accepted under the [CLA](CLA.md) — **cre
 
 ## License
 
-**Copyright (c) 2026 Binay Dalai. All rights reserved.** This code is not open source. You may not use, copy, modify, distribute, or commercialize it for your own personal or commercial purposes without explicit written permission from the author, who alone retains the right to use and monetize this project. See [CONTRIBUTING.md](CONTRIBUTING.md).
+[Apache-2.0](LICENSE). Use it, fork it, ship it commercially — no strings.
+
+This repository is part of Signetry's [open-core model](https://github.com/Signetry/signetry/blob/main/LICENSING.md):
+the **integration surface is Apache-2.0** so anyone can add an agent, an editor, or a
+CI adapter, while the engine ([`Signetry/core`](https://github.com/Signetry/core)) is
+source-available under BUSL-1.1 and converts to Apache-2.0 on 2030-08-31.
+
+Contributions are accepted under the [CLA](CLA.md) — it lets us move a well-built
+adapter into the engine later without asking every contributor for permission again.
